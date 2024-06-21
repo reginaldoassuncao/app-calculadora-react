@@ -58,3 +58,7 @@ Contribuições para o projeto são bem-vindas! Para contribuir, por favor, siga
 ## Licença
 
 Este projeto está licenciado sob a Licença MIT - veja o arquivo [LICENSE](LICENSE) para detalhes.
+
+## Deploy
+
+A aplicação está disponível para teste em [https://app-calculadora-react.vercel.app](https://app-calculadora-react.vercel.app)
