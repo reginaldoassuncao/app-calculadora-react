@@ -1,0 +1,145 @@
+/* src/index.css */
+.app-container {
+  text-align: center; /* Centraliza todos os conteúdos dentro do container */
+  width: 100%; /* Usa a largura total para centralizar no nível superior */
+}
+
+.calculator-title {
+  font-size: 24px; /* Ajuste conforme necessário */
+  color: #333; /* Cor do texto */
+  margin: 20px 0; /* Espaço acima e abaixo do título */
+}
+
+.calculator {
+  display: inline-block; /* Isso garante que a calculadora não estique para a largura total */
+  border: 1px solid #ccc;
+  padding: 20px;
+  max-width: 350px;
+  margin: auto;
+  background-color: #f8f9fa;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  border-radius: 8px;
+}
+
+.display {
+  border: 1px solid #eee;
+  padding: 5px 10px 5px 10px; /* Reduzindo o padding vertical */
+  margin-bottom: 10px;
+  background-color: #ffffff;
+  text-align: right;
+  font-size: 24px;
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  min-height: 60px;
+  border-radius: 4px;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+
+
+.keypad {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.keypad button {
+  padding: 10px;
+  border: none;
+  background-color: #e9ecef;
+  color: #333;
+  font-size: 16px;
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.keypad button:hover {
+  background-color: #d3d9df;
+  cursor: pointer;
+}
+
+.keypad button:active {
+  background-color: #c1c7cd;
+}
+
+/* Estilos para tema escuro (adicione um toggle para alternar os temas) */
+.dark-mode .calculator {
+  background-color: #333;
+  color: #fff;
+  border-color: #222;
+}
+
+.dark-mode .display {
+  background-color: #444;
+  color: #fff;
+  border-color: #333;
+}
+
+.dark-mode .keypad button {
+  background-color: #555;
+  color: #fff;
+}
+
+.dark-mode .keypad button:hover {
+  background-color: #666;
+}
+
+/* Estilos para o botão de alternância de tema */
+.theme-toggle {
+  padding: 8px 16px; /* Aumenta o padding para um botão mais acessível */
+  font-size: 16px; /* Torna o texto um pouco maior */
+  margin-bottom: 10px; /* Adiciona espaço abaixo do botão */
+  cursor: pointer; /* Indica que o botão é clicável */
+  border: none; /* Remove a borda */
+  border-radius: 4px; /* Borda arredondada para suavidade */
+  background-color: #f0f0f0; /* Cor de fundo neutra */
+  color: #333; /* Cor de texto escuro para contraste */
+  transition: background-color 0.3s; /* Suaviza a transição de cores */
+}
+
+/* Efeito hover para o botão */
+.theme-toggle:hover {
+  background-color: #e2e2e2; /* Muda a cor de fundo ao passar o mouse */
+}
+
+/* Estilos específicos para o botão quando o modo claro está ativo */
+.light-mode .theme-toggle {
+  background-color: #d1d1d1; /* Fundo mais claro para destaque */
+  color: #000; /* Texto preto para melhor legibilidade */
+}
+
+/* Estilos específicos para o botão quando o modo escuro está ativo */
+.dark-mode .theme-toggle {
+  background-color: #555; /* Fundo mais escuro para contraste */
+  color: #fff; /* Texto branco para legibilidade */
+}
+
+/* Estilos base para o botão, aplicando uma cor de fundo mais neutra */
+.button {
+  background-color: #f0f0f0; /* Fundo neutro para todos os botões */
+  color: #333; /* Texto escuro para contraste */
+  border: none;
+  border-radius: 4px;
+  padding: 10px;
+  margin: 5px;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.button:hover {
+  background-color: #e2e2e2;
+}
+
+.dark-mode .button {
+  background-color: #555;
+  color: #fff;
+}
+
+.dark-mode .button:hover {
+  background-color: #666;
+}
+
+
