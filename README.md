@@ -1,4 +1,4 @@
-# App Calculator React
+# App Calculadora React
 
 Este projeto é uma calculadora construída utilizando React. Ela suporta operações aritméticas básicas como adição, subtração, multiplicação e divisão, e oferece funcionalidades como um modo claro e escuro para melhorar a experiência do usuário.
 
@@ -62,3 +62,11 @@ Este projeto está licenciado sob a Licença MIT - veja o arquivo [LICENSE](LICE
 ## Deploy
 
 A aplicação está disponível para teste em [https://app-calculadora-react.vercel.app](https://app-calculadora-react.vercel.app)
+
+## Capturas de Tela
+
+### Modo Claro
+![Modo Claro](public/screenshots/light-mode.png)
+
+### Modo Escuro
+![Modo Escuro](public/screenshots/dark-mode.png)
