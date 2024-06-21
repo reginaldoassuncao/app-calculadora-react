@@ -1,5 +1,7 @@
 # App Calculadora React
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 Este projeto é uma calculadora construída utilizando React. Ela suporta operações aritméticas básicas como adição, subtração, multiplicação e divisão, e oferece funcionalidades como um modo claro e escuro para melhorar a experiência do usuário.
 
 ## Funcionalidades
