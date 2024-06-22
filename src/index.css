@@ -1,29 +1,37 @@
 /* src/index.css */
 .app-container {
-  text-align: center; /* Centraliza todos os conteúdos dentro do container */
-  width: 100%; /* Usa a largura total para centralizar no nível superior */
+  text-align: center;
+  width: 100%;
 }
 
 .calculator-title {
-  font-size: 24px; /* Ajuste conforme necessário */
-  color: #333; /* Cor do texto */
-  margin: 20px 0; /* Espaço acima e abaixo do título */
+  font-size: 24px;
+  color: #333;
+  margin: 20px 0;
+}
+
+.calculator-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 800px; /* Definir uma largura fixa para o contêiner principal */
+  margin: 0 auto; /* Centralizar o contêiner */
 }
 
 .calculator {
-  display: inline-block; /* Isso garante que a calculadora não estique para a largura total */
   border: 1px solid #ccc;
   padding: 20px;
-  max-width: 350px;
-  margin: auto;
   background-color: #f8f9fa;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   border-radius: 8px;
+  margin-bottom: 20px;
+  max-width: 350px; /* Largura máxima para a calculadora */
+  width: 350px; /* Definir largura fixa para a calculadora */
 }
 
 .display {
   border: 1px solid #eee;
-  padding: 5px 10px 5px 10px; /* Reduzindo o padding vertical */
+  padding: 5px 10px;
   margin-bottom: 10px;
   background-color: #ffffff;
   text-align: right;
@@ -35,9 +43,11 @@
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  overflow: hidden; /* Esconder conteúdo que ultrapassa a largura */
+  text-overflow: ellipsis; /* Adicionar reticências para indicar conteúdo oculto */
+  white-space: nowrap; /* Impedir quebra de linha */
+  max-width: 100%; /* Garantir que a largura não exceda a do contêiner pai */
 }
-
-
 
 .keypad {
   display: grid;
@@ -65,81 +75,96 @@
   background-color: #c1c7cd;
 }
 
-/* Estilos para tema escuro (adicione um toggle para alternar os temas) */
-.dark-mode .calculator {
-  background-color: #333;
-  color: #fff;
-  border-color: #222;
-}
-
-.dark-mode .display {
-  background-color: #444;
-  color: #fff;
-  border-color: #333;
-}
-
-.dark-mode .keypad button {
-  background-color: #555;
-  color: #fff;
-}
-
-.dark-mode .keypad button:hover {
-  background-color: #666;
-}
-
-/* Estilos para o botão de alternância de tema */
 .theme-toggle {
-  padding: 8px 16px; /* Aumenta o padding para um botão mais acessível */
-  font-size: 16px; /* Torna o texto um pouco maior */
-  margin-bottom: 10px; /* Adiciona espaço abaixo do botão */
-  cursor: pointer; /* Indica que o botão é clicável */
-  border: none; /* Remove a borda */
-  border-radius: 4px; /* Borda arredondada para suavidade */
-  background-color: #f0f0f0; /* Cor de fundo neutra */
-  color: #333; /* Cor de texto escuro para contraste */
-  transition: background-color 0.3s; /* Suaviza a transição de cores */
-}
-
-/* Efeito hover para o botão */
-.theme-toggle:hover {
-  background-color: #e2e2e2; /* Muda a cor de fundo ao passar o mouse */
-}
-
-/* Estilos específicos para o botão quando o modo claro está ativo */
-.light-mode .theme-toggle {
-  background-color: #d1d1d1; /* Fundo mais claro para destaque */
-  color: #000; /* Texto preto para melhor legibilidade */
-}
-
-/* Estilos específicos para o botão quando o modo escuro está ativo */
-.dark-mode .theme-toggle {
-  background-color: #555; /* Fundo mais escuro para contraste */
-  color: #fff; /* Texto branco para legibilidade */
-}
-
-/* Estilos base para o botão, aplicando uma cor de fundo mais neutra */
-.button {
-  background-color: #f0f0f0; /* Fundo neutro para todos os botões */
-  color: #333; /* Texto escuro para contraste */
+  padding: 8px 16px;
+  font-size: 16px;
+  margin-bottom: 10px;
+  cursor: pointer;
   border: none;
   border-radius: 4px;
-  padding: 10px;
-  margin: 5px;
-  font-size: 16px;
+  background-color: #f0f0f0;
+  color: #333;
   transition: background-color 0.3s;
 }
 
-.button:hover {
+.theme-toggle:hover {
   background-color: #e2e2e2;
 }
 
-.dark-mode .button {
+.dark-mode .theme-toggle {
   background-color: #555;
   color: #fff;
 }
 
-.dark-mode .button:hover {
-  background-color: #666;
+.history-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 20px;
+  width: 250px; /* Definir uma largura fixa para o contêiner de histórico */
 }
 
+.toggle-history-button {
+  padding: 8px 16px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  background-color: #f0f0f0;
+  color: #333;
+  transition: background-color 0.3s;
+  margin-bottom: 10px;
+}
 
+.toggle-history-button:hover {
+  background-color: #e2e2e2;
+}
+
+.dark-mode .toggle-history-button {
+  background-color: #555;
+  color: #fff;
+}
+
+.history {
+  padding: 10px;
+  background-color: #f1f1f1;
+  border-radius: 8px;
+  max-width: 250px; /* Largura máxima para o contêiner de histórico */
+  text-align: left;
+  overflow: hidden; /* Esconder conteúdo que ultrapassa a largura */
+}
+
+.history h2 {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.history ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.history li {
+  font-size: 16px;
+  color: #666;
+  padding: 5px 0;
+  border-bottom: 1px solid #ccc;
+  overflow: hidden; /* Esconder conteúdo que ultrapassa a largura */
+  text-overflow: ellipsis; /* Adicionar reticências para indicar conteúdo oculto */
+  white-space: nowrap; /* Impedir quebra de linha */
+}
+
+.dark-mode .history {
+  background-color: #444;
+  color: #fff;
+}
+
+.dark-mode .history h2 {
+  color: #fff;
+}
+
+.dark-mode .history li {
+  color: #ddd;
+  border-bottom-color: #555;
+}
