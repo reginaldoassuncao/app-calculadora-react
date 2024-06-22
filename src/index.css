@@ -168,3 +168,24 @@
   color: #ddd;
   border-bottom-color: #555;
 }
+
+.dark-mode .calculator {
+  background-color: #333;
+  color: #fff;
+  border-color: #222;
+}
+
+.dark-mode .display {
+  background-color: #444;
+  color: #fff;
+  border-color: #333;
+}
+
+.dark-mode .keypad button {
+  background-color: #555;
+  color: #fff;
+}
+
+.dark-mode .keypad button:hover {
+  background-color: #666;
+}

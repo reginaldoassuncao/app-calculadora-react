@@ -9,6 +9,8 @@ Este projeto é uma calculadora construída utilizando React. Ela suporta opera�
 - Realiza operações aritméticas básicas.
 - Alternância entre modo claro e escuro.
 - Validação de entrada para prevenir erros comuns, como múltiplos operadores consecutivos.
+- **Novo:** Histórico de cálculos com botão para mostrar/ocultar o histórico.
+- **Novo:** Melhorias no layout para garantir estabilidade durante a exibição e atualização do histórico.
 
 ## Tecnologias Utilizadas
 
@@ -70,5 +72,5 @@ A aplicação está disponível para teste em [https://app-calculadora-react.ver
 ### Modo Claro
 ![Modo Claro](public/screenshots/light-mode.png)
 
-### Modo Escuro
+### Modo Escuropublic\screenshots\dark-mode-png
 ![Modo Escuro](public/screenshots/dark-mode.png)

@@ -52,7 +52,7 @@ function Calculator() {
 
   return (
     <div className={`calculator-container ${darkMode ? 'dark-mode' : ''}`}>
-      <div className="calculator">
+      <div className={`calculator ${darkMode ? 'dark-mode' : ''}`}>
         <button onClick={toggleTheme} className="theme-toggle">
           {darkMode ? 'Light Mode' : 'Dark Mode'}
         </button>
@@ -75,7 +75,7 @@ function Calculator() {
           <button onClick={deleteLastEntry}>DEL</button>
         </div>
       </div>
-      <div className="history-container">
+      <div className={`history-container ${darkMode ? 'dark-mode' : ''}`}>
         <button onClick={toggleHistory} className="toggle-history-button">
           {showHistory ? 'Esconder Histórico' : 'Ver Histórico'}
         </button>
