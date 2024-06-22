@@ -72,5 +72,5 @@ A aplicação está disponível para teste em [https://app-calculadora-react.ver
 ### Modo Claro
 ![Modo Claro](public/screenshots/light-mode.png)
 
-### Modo Escuropublic\screenshots\dark-mode-png
+### Modo Escuro
 ![Modo Escuro](public/screenshots/dark-mode.png)
